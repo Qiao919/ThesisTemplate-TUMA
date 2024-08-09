@@ -1,5 +1,7 @@
 # Master Thesis Template Instructions
 
+This template is based on the Thesis Template from TUM Economics of Innovation, authored by Hanna Hottenrott.
+
 1. **Signed Master Thesis Topic**: 
    - Upload the approved and signed Master Thesis topic file with the filename `SignedTopic.pdf` and overwrite.
 
