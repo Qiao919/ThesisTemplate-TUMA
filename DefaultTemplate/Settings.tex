@@ -1,0 +1,98 @@
+\usepackage[utf8]{inputenc} %basic and default package 
+
+%optional packages:
+\usepackage{adjustbox} %can center content wider than the \textwidth
+\usepackage{amsmath,amsthm,amsfonts} %for new formulas and symbols
+\usepackage{array} % different options for table cell orientation
+\usepackage[ngerman,english]{babel} % english is the same as american or USenglish
+\usepackage{chngcntr} %for changing the resetting of counters
+    \counterwithout{figure}{chapter}
+\usepackage{fancyvrb} %for literally replaying text or code 
+\usepackage{geometry} %for customizing page layout
+    \newgeometry{tmargin=2.5cm,bmargin=2.5cm,lmargin=3cm,rmargin=3cm}
+    
+\usepackage[acronym,xindy,toc]{glossaries} %TODO: include "acronym" if glossary and acronym should be separated Margins:   
+%\makeglossaries
+\usepackage{csquotes}
+\usepackage{graphicx} %for including figures and images
+\usepackage[acronym]{glossaries-extra} %for acronyms
+%\usepackage{hyperref} %for inserting external links and coloring internal ones
+    %\hypersetup{%need to be set up properly
+     %   colorlinks=true, %different colored links at all
+      %  linkcolor=blue, %internal references
+       % urlcolor=red, %external links
+        %pdftitle=(How to write a thesis)}%name of PDF download
+\usepackage{lipsum} %for generic text generation
+\usepackage{makecell} % allows nice manual configuration of cells with linebreaks in \thead and \makecell with alignments
+\usepackage{multirow} %makes it possible to have bigger cells over multiple rows in a table
+\usepackage{pdfpages} % for including multiple pages of pdfs
+\usepackage{setspace} %for adjusting spacing
+    \onehalfspacing
+\usepackage{siunitx} % for physical accurate units and other numerical presentations
+\usepackage{subfig} % for having figures side by side
+\usepackage{tablefootnote} % for footnotes in tables as \tablefootnote
+\usepackage{pdfpages}
+\usepackage{etoolbox}%for \includefilesfrom command
+\usepackage{threeparttable} % another way to add footnotes as \tablenotes with \item [x] <your footnote> after setting \tnote{x}
+\usepackage{tikz} %for mathematical drawings
+\usepackage{titlesec}
+    \titleformat{\chapter}{\normalfont\huge\bfseries}{\thechapter.}{20pt}{\huge\bfseries}
+\usepackage{xcolor} %for writing in different colors
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+%packages needed for bibliography
+\usepackage[style=apa,backend=biber]{biblatex}
+\addbibresource{References.bib}
+\newcommand{\includefilesfrom}[1]{%
+    \foreach \index in {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}{%
+    \IfFileExists{#1/\index}{%
+    \input{#1/\index}}%
+    }{%
+    }%
+}%
+\usepackage{float}%for \begin{figure}[H] foreced position
+\usepackage{caption} % needed to customize captions
+\usepackage{chngcntr} % needed to customize counter behavior
+\usepackage{tocloft} % needed to customize the list of figures
+\captionsetup[figure]{
+    labelformat=simple, 
+    labelsep=space,
+    textfont=normalfont,
+    labelfont={bf}, % makes the "Fig." part bold
+    name=Fig.
+}
+% Redefine the figure numbering format to "Fig. 1.1"
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\counterwithin{figure}{chapter}
+% Customize the List of Figures appearance
+\renewcommand{\cftfigfont}{\textbf{ Fig.~}} % Makes "Fig." bold in the List of Figures
+\renewcommand{\cftfigpresnum}{\bfseries} % Makes the figure number bold in the List of Figures
+\renewcommand{\cftfigaftersnum}{\normalfont} % Adds a space after the figure number
+
+% Redefine the table caption label to "Tab." and make it bold
+\captionsetup[table]{
+    labelformat=simple, 
+    labelsep=space,
+    textfont=normalfont,
+    labelfont={bf}, % makes the "Tab." part bold
+    name=Tab.
+}
+% Redefine the table numbering format to "Tab. 1.1"
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
+% Ensure tables are numbered within chapters
+\counterwithin{table}{chapter}
+% Customize the List of Tables appearance
+\renewcommand{\cfttabfont}{\textbf{ Tab.~}} % Makes "Tab." bold in the List of Tables
+\renewcommand{\cfttabpresnum}{\bfseries} % Makes the table number bold in the List of Tables
+\renewcommand{\cfttabaftersnum}{\normalfont} % Switch back to normal font for caption text
+
+\renewcommand{\contentsname}{Table of Contents}
+
+% Define a custom command for creating glossary entries with bold terms
+\newcommand{\newboldglossary}[3]{%
+  \newglossaryentry{#1}{%
+    name={\textbf{#2}},  
+    description={#3},
+    text={\textbf{#2}}  
+  }%
+}

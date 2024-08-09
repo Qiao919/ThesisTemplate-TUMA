@@ -1,0 +1,72 @@
+\documentclass[12pt,onehalfspacing,headsepline,oneside,openright,a4paper]{report}
+\include{DefaultTemplate/Settings}
+
+% TO-DO: change thesis information
+\newcommand*{\getTitle}             {Your Thesis Title}
+\newcommand*{\getsubTitle}          {Subtitle}
+\newcommand*{\getAuthor}            {Student Name} 
+\newcommand*{\getSupervisor}        {Prof. Dr. Constantinos Antoniou}
+\newcommand*{\getAuthorMatrNr}      {Matriculation Num}
+\newcommand*{\getMentor}            {Dr.-Ing. Mentor}
+\newcommand*{\getSubmissionDate}    {DD/MM/YYYY}
+\newcommand*{\getStartDate}         {DD/MM/YYYY}
+\newcommand*{\getCourseofStudy}     {Rail, Transport and Logistics}
+
+
+
+
+\makeglossaries
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}               
+\fancyhf{}                          
+\fancyhead[C]{\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}} %make headers for each chapter
+
+\begin{document}
+\selectlanguage{english}
+
+\include{DefaultTemplate/Title} %inserts title page from file Title
+\setcounter{page}{0}%no numbering of the title page
+\includepdf[pages=-]{SignedTopic.pdf}%your Master Thesis Topic with Signature of Supervisor
+\include{Abstract}%inserts abstract from file Abstract
+\pagenumbering{Roman} %starts numbering of pages in Roman
+\clearpage
+
+\tableofcontents %inserts table of contents 
+\clearpage
+
+\include{Abbreviation}
+\printglossary[type=\acronymtype,title={List of Abbreviations},nonumberlist,style=super3col]
+\clearpage
+
+\include{Glossary}
+\printglossary[nonumberlist]
+\clearpage
+
+\addcontentsline{toc}{chapter}{List of Symbols} 
+\include{Symbol}
+\clearpage
+
+\addcontentsline{toc}{chapter}{List of Figures} % Adds List of Figures to Contents
+\listoffigures
+\clearpage
+
+\addcontentsline{toc}{chapter}{List of Tables} 
+\listoftables
+\clearpage
+
+\setcounter{page}{1}%numbering starts at 1
+\pagenumbering{arabic}%main part is numbered in arabic
+
+\includefilesfrom{Chapter}
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+
+\appendix
+\includefilesfrom{Appendix}
+
+\include{DefaultTemplate/Declaration}
+\end{document}
