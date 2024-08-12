@@ -53,6 +53,10 @@
 \usepackage{float}%for \begin{figure}[H] foreced position
 \usepackage{caption} % needed to customize captions
 \usepackage{chngcntr} % needed to customize counter behavior
+\makeatletter
+\let\c@lofdepth\relax
+\let\c@lotdepth\relax
+\makeatletter
 \usepackage{tocloft} % needed to customize the list of figures
 \captionsetup[figure]{
     labelformat=simple, 

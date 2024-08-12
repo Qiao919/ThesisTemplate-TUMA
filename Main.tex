@@ -1,5 +1,5 @@
-\documentclass[12pt,onehalfspacing,headsepline,oneside,openright,a4paper]{report}
-\include{DefaultTemplate/Settings}
+\documentclass[12pt,oneside,openright,a4paper]{report}
+\input{DefaultTemplate/Settings}
 
 % TO-DO: change thesis information
 \newcommand*{\getTitle}             {Your Thesis Title}
@@ -13,10 +13,6 @@
 \newcommand*{\getCourseofStudy}     {Rail, Transport and Logistics}
 
 
-
-
-\makeglossaries
-
 \usepackage{fancyhdr}
 \pagestyle{fancy}               
 \fancyhf{}                          
@@ -25,9 +21,9 @@
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}} %make headers for each chapter
 
 \begin{document}
-\selectlanguage{english}
-
-\include{DefaultTemplate/Title} %inserts title page from file Title
+\selectlanguage{english}%
+\include{DefaultTemplate/Title}%
+%inserts title page from file Title
 \setcounter{page}{0}%no numbering of the title page
 \includepdf[pages=-]{SignedTopic.pdf}%your Master Thesis Topic with Signature of Supervisor
 \include{Abstract}%inserts abstract from file Abstract
