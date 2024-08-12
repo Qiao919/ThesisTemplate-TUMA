@@ -11,17 +11,11 @@
 \usepackage{geometry} %for customizing page layout
     \newgeometry{tmargin=2.5cm,bmargin=2.5cm,lmargin=3cm,rmargin=3cm}
     
-\usepackage[acronym,xindy,toc]{glossaries} %TODO: include "acronym" if glossary and acronym should be separated Margins:   
-%\makeglossaries
+\usepackage[acronym,xindy,toc]{glossaries}
 \usepackage{csquotes}
 \usepackage{graphicx} %for including figures and images
-\usepackage[acronym]{glossaries-extra} %for acronyms
-%\usepackage{hyperref} %for inserting external links and coloring internal ones
-    %\hypersetup{%need to be set up properly
-     %   colorlinks=true, %different colored links at all
-      %  linkcolor=blue, %internal references
-       % urlcolor=red, %external links
-        %pdftitle=(How to write a thesis)}%name of PDF download
+\usepackage{glossaries-extra} 
+
 \usepackage{lipsum} %for generic text generation
 \usepackage{makecell} % allows nice manual configuration of cells with linebreaks in \thead and \makecell with alignments
 \usepackage{multirow} %makes it possible to have bigger cells over multiple rows in a table
@@ -53,6 +47,12 @@
 \usepackage{float}%for \begin{figure}[H] foreced position
 \usepackage{caption} % needed to customize captions
 \usepackage{chngcntr} % needed to customize counter behavior
+
+\makeatletter
+\let\c@lofdepth\relax
+\let\c@lotdepth\relax
+\makeatletter
+
 \usepackage{tocloft} % needed to customize the list of figures
 \captionsetup[figure]{
     labelformat=simple, 
@@ -86,7 +86,6 @@
 \renewcommand{\cfttabpresnum}{\bfseries} % Makes the table number bold in the List of Tables
 \renewcommand{\cfttabaftersnum}{\normalfont} % Switch back to normal font for caption text
 
-\renewcommand{\contentsname}{Table of Contents}
 
 % Define a custom command for creating glossary entries with bold terms
 \newcommand{\newboldglossary}[3]{%
