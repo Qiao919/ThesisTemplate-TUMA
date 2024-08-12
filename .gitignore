@@ -1,0 +1,51 @@
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.gz
+*.bbl
+*.blg
+
+# LaTeX intermediate files
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# LaTeX editor files
+*.swp
+*.synctex(busy)
+*.synctex.gz(busy)
+*.pdfsync
+
+# LaTeX generated files
+*.dvi
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.gz
+*.bbl
+*.blg
+
+# LaTeX intermediate files
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# LaTeX editor files
+*.swp
+*.synctex(busy)
+*.synctex.gz(busy)
+*.pdfsync
+
+# LaTeX generated files
+*.dvi
+
+# Additional LaTeX files
+*.lof
+*.bcf
+*.lot
+*.run.xml
