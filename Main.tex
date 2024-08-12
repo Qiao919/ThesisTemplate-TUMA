@@ -14,13 +14,14 @@
 
 
 %thesis structure defined below, no changes unless necessary
+\makeglossaries
 \setlength{\headheight}{14.49998pt}
 \usepackage{fancyhdr}
 \pagestyle{fancy}               
 \fancyhf{}                          
 \fancyhead[C]{\leftmark}
 \fancyfoot[C]{\thepage}
-\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}} %make headers for each chapter
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}} 
 
 \begin{document}
 \selectlanguage{english}
@@ -36,7 +37,7 @@
 \clearpage
 
 \include{Abbreviation}
-\printglossary[type=\acronymtype,title={List of Abbreviations},nonumberlist,style=super3col]
+\printglossary[type=acronym,title={List of Abbreviations},nonumberlist,style=super3col]
 \clearpage
 
 \include{Glossary}
