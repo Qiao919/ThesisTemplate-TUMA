@@ -5,32 +5,26 @@
 
 ## Project Structure
 
-1. **main.tex**: 
-   - Defines the overall structure of the thesis.
+- **main.tex**: Defines the overall structure of the thesis.
 
-2. **Settings.tex**: 
-   - Contains all preamble settings and new commands.
-   - Essential `usepackage` commands and layout definitions are loaded here.
+- **Settings.tex**: Contains all preamble settings and new commands.
 
-3. **Chapter and Appendix folders**: 
-   - Store individual chapter and appendix files.
+- **Chapter and Appendix folders**: Store individual chapter and appendix files.
 
-4. **DefaultTemplate folder**: 
-   - Contains title page, statutory declaration, and logos.
+- **DefaultTemplate folder**: Contains title page, statutory declaration, and logos.
 
-5. **Images folder**: 
-   - Stores all images used in the thesis.
+- **Images folder**: Stores all images used in the thesis.
 
-6. **SignedTopic.pdf**: 
-   - The thesis proposal topic signed by the supervisor.
+- **SignedTopic.pdf**: The thesis proposal topic signed by the supervisor.
 
-7. **References.bib**: 
-   - Contains all bibliographic references in BibTeX format.
+- **References.bib**: Contains all bibliographic references in BibTeX format.
 
 ## How to Use This Template
+0. **Download the ZIP file and upload it to Overleaf as a new project**
+
 1. **Thesis information**
    - Avoid making changes to files in the `DefaultTemplate` folder unless absolutely necessary.
-   - All thesis information adjustments, including those on the title page and Declaration, can be made in main.tex (lines 5 to 14).
+   - All thesis information adjustments, including those on the title page and Declaration, can be made in `main.tex`  (lines 5 to 14).
 
 2. **Signed Master Thesis Topic**: 
    - Upload the approved and signed Master Thesis topic file with the filename `SignedTopic.pdf` and overwrite the existing file.
