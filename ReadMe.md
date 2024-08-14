@@ -1,6 +1,7 @@
 # Master Thesis Template Instructions
 
-This template is based on the Thesis Template from TUM Economics of Innovation, authored by Hanna Hottenrott.
+- This template is based on the Thesis Template from TUM Economics of Innovation, authored by Hanna Hottenrott.
+- This version has been adapted by Qiao to align with the TUM Asia master thesis requirements.
 
 ## Project Structure
 
