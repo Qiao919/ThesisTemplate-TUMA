@@ -51,5 +51,5 @@ This template is based on the Thesis Template from TUM Economics of Innovation, 
      - No special steps are needed for initial compilation.
    - If compiling on your local machine:
      - Use following commands:
-       `pdflatex Glossary.tex`
-   -Remember to compile your LaTeX document regularly to check for any errors or formatting issues as you work on your thesis.
+     - `pdflatex Glossary.tex`
+    - Remember to compile your LaTeX document regularly to check for any errors or formatting issues as you work on your thesis.
