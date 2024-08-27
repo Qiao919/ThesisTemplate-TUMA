@@ -25,6 +25,7 @@
 
 \begin{document}
 \selectlanguage{english}
+\setlength{\parindent}{0pt} % no indent
 
 \include{DefaultTemplate/Title} %inserts title page from file Title
 \setcounter{page}{0}%no numbering of the title page
@@ -60,6 +61,7 @@
 \pagenumbering{arabic}%main part is numbered in arabic
 
 \includefilesfrom{Chapter}
+\clearpage
 
 \addcontentsline{toc}{chapter}{Bibliography}
 \printbibliography
