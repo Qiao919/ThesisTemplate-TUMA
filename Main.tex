@@ -2,8 +2,8 @@
 \input{DefaultTemplate/Settings}
 
 % TO-DO: change thesis information
-\newcommand*{\getTitle}             {Your Thesis Title}
-\newcommand*{\getsubTitle}          {Subtitle}
+\newcommand*{\getTitle}             {Your Thesis Title} % use \\ to breakline if needed
+\newcommand*{\getsubTitle}          {Subtitle} % use \\ to breakline if needed
 \newcommand*{\getAuthor}            {Student Name} 
 \newcommand*{\getSupervisor}        {Prof. Dr. Constantinos Antoniou}
 \newcommand*{\getAuthorMatrNr}      {Matriculation Num}
@@ -22,21 +22,19 @@
 \fancyhead[C]{\leftmark}
 \fancyfoot[C]{\thepage}
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}} 
-
 \begin{document}
+
 \selectlanguage{english}
 \setlength{\parindent}{0pt} % no indent
 
 \include{DefaultTemplate/Title} %inserts title page from file Title
 \setcounter{page}{0}%no numbering of the title page
-\includepdf[pages=-]{SignedTopic.pdf}%your Master Thesis Topic with Signature of Supervisor
+\includepdf[pages=-]{SignedTopic.pdf}%your Master Thesis Topic with Supervisor's Signature
 \include{Abstract}%inserts abstract from file Abstract
 \pagenumbering{Roman} %starts numbering of pages in Roman
 \clearpage
-
 \tableofcontents %inserts table of contents 
 \clearpage
-
 \include{Abbreviation}
 \printglossary[type=acronym,title={List of Abbreviations},nonumberlist,style=super3col]
 \clearpage
